@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ---------- BODY ---------- */
+body {
+    background: #f8f9fa;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background: #0d6efd;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 24px;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    background: linear-gradient(to right, #0d6efd, #20c997);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* ---------- FISH CARDS ---------- */
+.fish-container {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.fish-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fish-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.fish-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.fish-card:hover img {
+    transform: scale(1.05);
+}
+
+.fish-card h3 {
+    margin: 15px 0 5px;
+    font-size: 20px;
+    color: #333;
+}
+
+.fish-card p {
+    color: #198754;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.fish-card button {
+    margin: 15px 0 20px;
+    padding: 10px 25px;
+    border: none;
+    background: #0d6efd;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.fish-card button:hover {
+    background: #084298;
+}
+
+/* ---------- LOGIN CARD ---------- */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #0d6efd, #20c997);
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    text-align: center;
+    width: 350px;
+}
+
+.login-card h2 {
+    color: #0d6efd;
+    margin-bottom: 5px;
+}
+
+.login-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.login-card button:hover {
+    background: #084298;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    margin-top: 40px;
+    color: #555;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width: 768px){
+    .fish-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishGo Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>FishGo Dashboard</h1>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </nav>
+
+    <div class="dashboard-container">
+        <h2 id="welcome-msg"></h2>
+
+        <!-- Admin Section -->
+        <div id="admin-section" class="role-section" style="display:none;">
+            <h3>Pending Fishermen</h3>
+            <div id="pending-fishermen"></div>
+
+            <h3>Pending Fish Approval</h3>
+            <div id="pending-fish"></div>
+        </div>
+
+        <!-- Fisherman Section -->
+        <div id="fisherman-section" class="role-section" style="display:none;">
+            <h3>My Fish</h3>
+            <div id="my-fish" class="fish-container"></div>
+
+            <h3>Add Fish</h3>
+            <form id="add-fish-form">
+                <input type="text" id="fish-name" placeholder="Name" required>
+                <input type="text" id="fish-category" placeholder="Category" required>
+                <input type="number" id="fish-price" placeholder="Price" required>
+                <input type="number" id="fish-weight" placeholder="Weight (kg)" required>
+                <input type="text" id="fish-freshness" placeholder="Freshness Status" required>
+                <button type="submit">Add Fish</button>
+            </form>
+        </div>
+
+        <!-- Customer Section -->
+        <div id="customer-section" class="role-section" style="display:none;">
+            <h3>Available Fish</h3>
+            <div id="available-fish" class="fish-container"></div>
+        </div>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
